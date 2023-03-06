@@ -1,5 +1,6 @@
 // define the callAPI function that takes a first name and last name as parameters
 var callAPI = (departure, HDD) => {
+  alert("Working");
   // instantiate a headers object
   var myHeaders = new Headers();
   // add content type header to object
@@ -13,6 +14,7 @@ var callAPI = (departure, HDD) => {
     body: raw,
     redirect: 'follow'
   };
+
   // make API call with parameters and use promises to get response
   fetch("https://voe39h9fl5.execute-api.us-east-2.amazonaws.com/staging", requestOptions)
     .then(response => response.text())
