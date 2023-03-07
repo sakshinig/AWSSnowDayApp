@@ -1,12 +1,12 @@
 // define the callAPI function that takes a first name and last name as parameters
-var callAPI = (departure, HDD) => {
+var callAPI = (percipitation, newSnow, snowDepth) => {
   alert("Working");
   // instantiate a headers object
   var myHeaders = new Headers();
   // add content type header to object
   myHeaders.append("Content-Type", "application/json");
   // using built in JSON utility package turn object to string and store in a variable
-  var raw = JSON.stringify({ "departure": departure, "HDD": HDD });
+  var raw = JSON.stringify({ "percipitation": percipitation, "new-snow": newSnow, "snow-depth": snowDepth});
   // create a JSON object with parameters for API call and store in a variable
   var requestOptions = {
     method: 'POST',

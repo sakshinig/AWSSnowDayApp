@@ -13,16 +13,11 @@
   <div class="login">
     <h1>Snow Day Calculator</h1>
     <form action='{{ url_for("predict")}}' method="post">
-      <input type="text" name="maximum-temperature" placeholder="Maximum Temperature" required="required" /><br>
-      <input type="text" name="minimum-temperature" placeholder="Minimum Temperature" required="required" /><br>
-      <input type="text" name="average-temperature" placeholder="Average Temperature" required="required" /><br>
-      <input type="text" name="departure" placeholder="Departure" required="required" /><br>
-      <input type="text" name="HDD" placeholder="HDD" required="required" /><br>
       <input type="text" name="percipitation" placeholder="Percipitation (inches)" required="required" /><br>
       <input type="text" name="new-snow" placeholder="New Snow (inches)" required="required" /><br>
       <input type="text" name="snow-depth" placeholder="Snow Depth (inches)" required="required" /><br>
       <button type="button"
-        onclick="callAPI(document.getElementsByName('departure').value,document.getElementsByName('HDD').value)"
+        onclick="callAPI(document.getElementsByName('percipitation').value,document.getElementsByName('new-snow').value,document.getElementsByName('snow-depth').value)"
         class="btn btn-primary btn-block btn-large">Predict Snow Day</button>
     </form>
     <br>
