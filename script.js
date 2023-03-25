@@ -6,8 +6,12 @@ var callAPI = (percipitation, newSnow, snowDepth) => {
   // add content type header to object
   myHeaders.append("Content-Type", "application/json");
   // using built in JSON utility package turn object to string and store in a variable
-  var raw = JSON.stringify({ "percipitation": percipitation, "new-snow": newSnow, "snow-depth": snowDepth});
+  console.log(newSnow);
+  var raw = {"percipitation": percipitation, 
+             "new-snow": newSnow, 
+             "snow-depth": snowDepth};
   // create a JSON object with parameters for API call and store in a variable
+  console.log(raw);
   var requestOptions = {
     method: 'POST',
     headers: myHeaders,
