@@ -18,6 +18,6 @@ var callAPI = (percipitation, newSnow, snowDepth) => {
   // make API call with parameters and use promises to get response
   fetch("https://voe39h9fl5.execute-api.us-east-2.amazonaws.com/staging", requestOptions)
     .then(response => response.text())
-    .then(result => alert(JSON.parse(result)))
+    .then(result => alert(result))
     .catch(error => console.log('error', error));
 }
